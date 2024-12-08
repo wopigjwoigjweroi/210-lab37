@@ -9,6 +9,8 @@ using namespace std;
 int gen_hash_index(string word); 
 void print(const map<int, list<string>>& hash_table); 
 void ASCIIsearch(const map<int, list<string>>& hash_table, int key); 
+void add(map<int, list<string>>& hash_table, const string& code);
+void remove(map<int, list<string>>& hash_table, int key);
 
 int main() {
 
@@ -82,3 +84,17 @@ void ASCIIsearch(const map<int, list<string>>& hash_table, int key) {
     }
 }
 
+void add(map<int, list<string>>& hash_table, const string& code) {
+    
+    int index = gen_hash_index(code); 
+    
+    hash_table[index].push_back(code); 
+
+    cout << "Code " << code << " added under Index " << index << endl; 
+
+}
+
+void remove(map<int, list<string>>& hash_table, int key) {
+
+
+}
