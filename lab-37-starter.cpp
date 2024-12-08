@@ -22,7 +22,7 @@ int main() {
 
     fstream infile(filename); 
 
-    long grandTotal; 
+    long grandTotal = 0; 
 
     string line; 
 
