@@ -1,6 +1,17 @@
+// COMSC-210 | Jeremiah Ortiz | Lab-37
 #include <iostream>
 using namespace std;
 
+int sum_ascii(string word) {
+
+    int sum = 0;
+
+    for (char c : word) {
+
+        sum += (int) c;
+    }  
+
+}
 
 int main() {
     char a = 'A';
