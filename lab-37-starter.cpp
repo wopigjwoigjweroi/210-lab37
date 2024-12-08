@@ -6,17 +6,8 @@
 #include <list> 
 using namespace std;
 
-int gen_hash_index(string word) {
-
-    int sum = 0;
-
-    for (char c : word) {
-
-        sum += (int) c;
-    }  
-
-    return sum % 1000; 
-}
+int gen_hash_index(string word); 
+void print(const map<int, list<string>>& hash_table); 
 
 int main() {
 
@@ -57,4 +48,20 @@ int main() {
     infile.close(); 
     
     return 0;
+}
+
+int gen_hash_index(string word) {
+
+    int sum = 0;
+
+    for (char c : word) {
+
+        sum += (int) c;
+    }  
+
+    return sum % 1000; 
+}
+
+void print(const map<int, list<string>>& hash_table) {
+
 }
