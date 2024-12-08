@@ -1,4 +1,4 @@
-// COMSC-210 | Jeremiah Ortiz | Lab-37
+// COMSC-210 | Jeremiah Ortiz | Lab-38
 #include <iostream>
 #include <string>
 #include <fstream> 
@@ -25,26 +25,6 @@ int main() {
         hash_table[hash].push_back(line); 
     }
 
-    int count = 0; 
-
-    for (const auto& entry : hash_table) {
-
-        if (count >= 100) {
-
-            break; 
-        }
-
-        cout << "Index: " << entry.first << endl;
-        cout << "Codes: \n"; 
-
-        for (const auto& code : entry.second) {
-
-            cout << code; 
-        }
-
-        cout << endl;
-    }
-
     infile.close(); 
     
     return 0;
@@ -63,5 +43,21 @@ int gen_hash_index(string word) {
 }
 
 void print(const map<int, list<string>>& hash_table) {
+
+    int count = 0; 
+
+    for (const auto& entry : hash_table) {
+
+        if (count >= 100) {
+            break; 
+        }
+        cout << "Index: " << entry.first << endl;
+        cout << "Codes: \n"; 
+
+        for (const auto& code : entry.second) {
+            cout << code; 
+        }
+        cout << endl;
+    }
 
 }
