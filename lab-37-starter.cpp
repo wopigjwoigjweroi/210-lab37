@@ -1,5 +1,7 @@
 // COMSC-210 | Jeremiah Ortiz | Lab-37
 #include <iostream>
+#include <string>
+#include <fstream> 
 using namespace std;
 
 int sum_ascii(string word) {
@@ -16,11 +18,14 @@ int sum_ascii(string word) {
 
 int main() {
 
-    string t1 = "First String: ";
-    string t2 = "Second String: "; 
+    string filename = "lab-37-data.txt";
 
-    cout << "ASCII Value of, " << t1 << sum_ascii(t1) << endl;
-    cout << "ASCII Value of, " << t2 << sum_ascii(t2) << endl; 
+    fstream infile(filename); 
+
+    long grandTotal; 
+
+    string line; 
+    
     
     return 0;
 }
@@ -40,4 +45,11 @@ E1D2665B21EA
     int b = 66;
     cout << b << endl;
     cout << (char) b << endl;
+
+    string t1 = "First String: ";
+    string t2 = "Second String: "; 
+
+    cout << "ASCII Value of, " << t1 << sum_ascii(t1) << endl;
+    cout << "ASCII Value of, " << t2 << sum_ascii(t2) << endl; 
+    
 */
