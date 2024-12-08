@@ -80,7 +80,7 @@ void ASCIIsearch(const map<int, list<string>>& hash_table, int key) {
         }
         cout << endl; 
     } else {
-        cout << "Hash Index " << key << " not found." << endl; 
+        cout << "Hash Index " << key << " not found.\n";  
     }
 }
 
@@ -91,10 +91,14 @@ void add(map<int, list<string>>& hash_table, const string& code) {
     hash_table[index].push_back(code); 
 
     cout << "Code " << code << " added under Index " << index << endl; 
-
 }
 
 void remove(map<int, list<string>>& hash_table, int key) {
 
+    if (hash_table.erase(key)) {
 
+        cout << "Index " << key << " removed.\n"; 
+    } else {
+        cout << "Index " << key << " not found.\n"; 
+    }
 }
