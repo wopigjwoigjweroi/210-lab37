@@ -30,6 +30,10 @@ int main() {
 
         grandTotal += sum_ascii(line); 
     }
+
+    cout << "Grand Total: " << grandTotal; 
+
+    infile.close(); 
     
     return 0;
 }
