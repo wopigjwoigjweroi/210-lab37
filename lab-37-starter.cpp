@@ -11,15 +11,23 @@ int sum_ascii(string word) {
         sum += (int) c;
     }  
 
+    return sum; 
 }
 
 int main() {
-    char a = 'A';
-    cout << a << endl;
-    cout << (int) a << endl;
-    int b = 66;
-    cout << b << endl;
-    cout << (char) b << endl;
+
+    string t1 = "First String: ";
+    string t2 = "Second String: "; 
+
+    cout << "ASCII Value of: " << t1 << sum_ascii(t1) << endl;
+
+    
+    // char a = 'A';
+    // cout << a << endl;
+    // cout << (int) a << endl;
+    // int b = 66;
+    // cout << b << endl;
+    // cout << (char) b << endl;
     
 
     return 0;
