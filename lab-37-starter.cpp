@@ -8,6 +8,7 @@ using namespace std;
 
 int gen_hash_index(string word); 
 void print(const map<int, list<string>>& hash_table); 
+void ASCIIsearch(const map<int, list<string>>& hash_table, int key); 
 
 int main() {
 
@@ -61,3 +62,23 @@ void print(const map<int, list<string>>& hash_table) {
     }
 
 }
+
+void ASCIIsearch(const map<int, list<string>>& hash_table, int key) {
+
+    auto it = hash_table.find(key);
+
+    if (it != hash_table.end()) {
+
+        cout << "Index: " << key << endl; 
+        cout << "Codes: "; 
+
+        for (const auto& code : it->second) {
+
+            cout << code << endl; 
+        }
+        cout << endl; 
+    } else {
+        cout << "Hash Index " << key << " not found." << endl; 
+    }
+}
+
