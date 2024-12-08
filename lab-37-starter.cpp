@@ -25,7 +25,11 @@ int main() {
     long grandTotal; 
 
     string line; 
-    
+
+    while (getline(infile, line)) {
+
+        grandTotal += sum_ascii(line); 
+    }
     
     return 0;
 }
