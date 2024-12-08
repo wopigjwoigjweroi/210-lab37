@@ -2,9 +2,11 @@
 #include <iostream>
 #include <string>
 #include <fstream> 
+#include <map>
+#include <list> 
 using namespace std;
 
-int sum_ascii(string word) {
+int gen_hash_index(string word) {
 
     int sum = 0;
 
@@ -13,7 +15,7 @@ int sum_ascii(string word) {
         sum += (int) c;
     }  
 
-    return sum; 
+    return sum % 1000; 
 }
 
 int main() {
@@ -22,16 +24,18 @@ int main() {
 
     fstream infile(filename); 
 
-    long grandTotal = 0; 
+    // long grandTotal = 0; 
+
+    map<int, list<string>> hash_table; 
 
     string line; 
 
-    while (getline(infile, line)) {
+    // while (getline(infile, line)) {
 
-        grandTotal += sum_ascii(line); 
-    }
+    //     grandTotal += sum_ascii(line); 
+    // }
 
-    cout << "Grand Total: " << grandTotal; 
+    // cout << "Grand Total: " << grandTotal; 
 
     infile.close(); 
     
