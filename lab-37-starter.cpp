@@ -38,9 +38,27 @@ int main() {
 
     // cout << "Grand Total: " << grandTotal; 
 
-    infile.close(); 
-
     int count = 0; 
+
+    for (const auto& entry : hash_table) {
+
+        if (count >= 100) {
+
+            break; 
+        }
+
+        cout << "Index: " << entry.first << endl;
+        cout << "Codes: \n"; 
+
+        for (const auto& code : entry.second) {
+
+            cout << code; 
+        }
+
+        cout << endl;
+    }
+
+    infile.close(); 
     
     return 0;
 }
