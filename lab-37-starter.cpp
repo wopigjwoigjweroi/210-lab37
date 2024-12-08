@@ -19,8 +19,8 @@ int main() {
     string t1 = "First String: ";
     string t2 = "Second String: "; 
 
-    cout << "ASCII Value of: " << t1 << sum_ascii(t1) << endl;
-
+    cout << "ASCII Value of, " << t1 << sum_ascii(t1) << endl;
+    cout << "ASCII Value of, " << t2 << sum_ascii(t2) << endl; 
     
     // char a = 'A';
     // cout << a << endl;
