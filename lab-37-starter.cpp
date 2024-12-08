@@ -30,14 +30,17 @@ int main() {
 
     string line; 
 
-    // while (getline(infile, line)) {
+    while (getline(infile, line)) {
 
-    //     grandTotal += sum_ascii(line); 
-    // }
+        int hash = gen_hash_index(line); 
+        hash_table[hash].push_back(line); 
+    }
 
     // cout << "Grand Total: " << grandTotal; 
 
     infile.close(); 
+
+    int count = 0; 
     
     return 0;
 }
