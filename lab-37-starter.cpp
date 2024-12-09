@@ -102,3 +102,34 @@ void remove(map<int, list<string>>& hash_table, int key) {
         cout << "Index " << key << " not found.\n"; 
     }
 }
+
+void modify(map<int, list<string>>& hash_table, int key) {
+
+    auto it = hash_table.find(key); 
+    if (it != hash_table.end()) {
+
+        cout << "Current Key in Index: " << key << ": ";
+
+        for (const auto& code : it->second) {
+
+            cout << code << " "; 
+
+        }
+        cout << endl; 
+
+        cout << "Modify Key:"; 
+        list<string> modify_key; 
+        string code; 
+
+        while (cin >> code && code != "-1") {
+
+            modify_key.push_back(code);
+        }
+
+        it->second = modify_key; 
+        cout << "Index: " << key << " updated!\n"; 
+    } else {
+
+        
+    }
+}
