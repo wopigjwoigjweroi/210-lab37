@@ -28,6 +28,22 @@ int main() {
         hash_table[hash].push_back(line); 
     }
 
+    int choice;
+
+    do {
+
+        cout << "\tMenu\n"; 
+        cout << "1. Print 1st 100 entries\n"; 
+        cout << "2. Search for Key\n"; 
+        cout << "3. Add Key\n"; 
+        cout << "4. Remove Key\n";
+        cout << "5. Modify Key\n"; 
+        cout << "6. Exit\n"; 
+        cin >> choice; 
+
+
+    }
+
     infile.close(); 
     
     return 0;
@@ -128,8 +144,8 @@ void modify(map<int, list<string>>& hash_table, int key) {
 
         it->second = modify_key; 
         cout << "Index: " << key << " updated!\n"; 
-    } else {
-
         
+    } else {
+        cout << "Index: " << key << " not found..\n"; 
     }
 }
