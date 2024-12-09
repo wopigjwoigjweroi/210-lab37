@@ -11,6 +11,7 @@ void print(const map<int, list<string>>& hash_table);
 void ASCIIsearch(const map<int, list<string>>& hash_table, int key); 
 void add(map<int, list<string>>& hash_table, const string& code);
 void remove(map<int, list<string>>& hash_table, int key);
+void modify(map<int, list<string>>& hash_table, int key); 
 
 int main() {
 
@@ -41,7 +42,57 @@ int main() {
         cout << "6. Exit\n"; 
         cin >> choice; 
 
+        switch(choice) {
 
+            case 1:
+                print(hash_table); 
+                break; 
+
+            case 2: {
+
+                int a; 
+                cout << "Enter Index to search: ";
+                cin >> a; 
+                ASCIIsearch(hash_table, a); 
+                break; 
+            }
+
+            case 3: {
+
+                string b; 
+                cout << "Enter Key to add: ";
+                cin >> b; 
+                add(hash_table, b); 
+                break; 
+            }
+
+            case 4: {
+
+                int key; 
+                cout << "Enter Key to remove: "; 
+                cin >> key; 
+                remove(hash_table, key); 
+                break; 
+            }
+
+            case 5: {
+
+                int c; 
+                cout << "Enter Key to modify: ";
+                cin >> c; 
+                modify(hash_table, c);
+                break;
+            }
+
+            case 6: {
+
+                cout << "Exiting...";
+                break; 
+
+                default: 
+                cout << "Invalid.\n";
+            }   
+        }
     } while (choice != 6); 
 
     infile.close(); 
