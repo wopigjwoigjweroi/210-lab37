@@ -42,7 +42,7 @@ int main() {
         cin >> choice; 
 
 
-    }
+    } while (choice != 6); 
 
     infile.close(); 
     
